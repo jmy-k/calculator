@@ -43,7 +43,7 @@ calculator.forEach((button)=>{
             if (Object.keys(value).length===0){
                 firstNumber += "1";
             }
-            else if (typeof value.Operator === 'string' && value.Operator.length){
+            else if (value.Operator !== undefined){
                 secondNumber +="1";
             }
             displayValue.textContent += "1";
@@ -52,7 +52,7 @@ calculator.forEach((button)=>{
             if (Object.keys(value).length===0){
                 firstNumber += "2";
             }
-            else if (typeof value.Operator === 'string' && value.Operator.length){
+            else if (value.Operator !== undefined){
                 secondNumber +="2";
             }
             displayValue.textContent += "2";
@@ -61,7 +61,7 @@ calculator.forEach((button)=>{
             if (Object.keys(value).length===0){
                 firstNumber += "3";
             }
-            else if (typeof value.Operator === 'string' && value.Operator.length){
+            else if (value.Operator !== undefined){
                 secondNumber +="3";
             }
             displayValue.textContent += "3";
@@ -70,7 +70,7 @@ calculator.forEach((button)=>{
             if (Object.keys(value).length===0){
                 firstNumber += "4";
             }
-            else if (typeof value.Operator === 'string' && value.Operator.length){
+            else if (value.Operator !== undefined){
                 secondNumber +="4";
             }
             displayValue.textContent += "4";
@@ -79,7 +79,7 @@ calculator.forEach((button)=>{
             if (Object.keys(value).length===0){
                 firstNumber += "5";
             }
-            else if (typeof value.Operator === 'string' && value.Operator.length){
+            else if (value.Operator !== undefined){
                 secondNumber +="5";
             }
             displayValue.textContent += "5";
@@ -88,7 +88,7 @@ calculator.forEach((button)=>{
             if (Object.keys(value).length===0){
                 firstNumber += "6";
             }
-            else if (typeof value.Operator === 'string' && value.Operator.length){
+            else if (value.Operator !== undefined){
                 secondNumber +="6";
             }
             displayValue.textContent += "6";
@@ -97,7 +97,7 @@ calculator.forEach((button)=>{
             if (Object.keys(value).length===0){
                 firstNumber += "7";
             }
-            else if (typeof value.Operator === 'string' && value.Operator.length){
+            else if (value.Operator !== undefined){
                 secondNumber +="7";
             }
             displayValue.textContent += "7";
@@ -106,7 +106,7 @@ calculator.forEach((button)=>{
             if (Object.keys(value).length===0){
                 firstNumber += "8";
             }
-            else if (typeof value.Operator === 'string' && value.Operator.length){
+            else if (value.Operator !== undefined){
                 secondNumber +="8";
             }
             displayValue.textContent += "8";
@@ -115,7 +115,7 @@ calculator.forEach((button)=>{
             if (Object.keys(value).length===0){
                 firstNumber += "9";
             }
-            else if (typeof value.Operator === 'string' && value.Operator.length){
+            else if (value.Operator !== undefined){
                 secondNumber +="9";
             }
             displayValue.textContent += "9";
@@ -124,7 +124,7 @@ calculator.forEach((button)=>{
             if (Object.keys(value).length===0){
                 firstNumber += "0";
             }
-            else if (typeof value.Operator === 'string' && value.Operator.length){
+            else if (value.Operator !== undefined){
                 secondNumber +="0";
             }
             displayValue.textContent += "0";
@@ -134,7 +134,7 @@ calculator.forEach((button)=>{
         else if (button.id === "+"){
             value.firstNumber = firstNumber;
             value.secondNumber = secondNumber;
-            if (typeof value.firstNumber === 'string' && value.firstNumber.length){
+            if (value.firstNumber !== undefined){
                 value.Operator = "+";
             }
             displayValue.textContent += "+";
@@ -142,7 +142,7 @@ calculator.forEach((button)=>{
         else if (button.id === "-"){
             value.firstNumber = firstNumber;
             value.secondNumber = secondNumber;
-            if (typeof value.firstNumber === 'string' && value.firstNumber.length){
+            if (value.firstNumber !== undefined){
                 value.Operator = "-";
             }
             displayValue.textContent += "-";
@@ -150,7 +150,7 @@ calculator.forEach((button)=>{
         else if (button.id === "*"){
             value.firstNumber = firstNumber;
             value.secondNumber = secondNumber;
-            if (typeof value.firstNumber === 'string' && value.firstNumber.length){
+            if (value.firstNumber !== undefined){
                 value.Operator = "*";
             }
             displayValue.textContent += "*";
@@ -158,7 +158,7 @@ calculator.forEach((button)=>{
         else if (button.id === "/"){
             value.firstNumber = firstNumber;
             value.secondNumber = secondNumber;
-            if (typeof value.firstNumber === 'string' && value.firstNumber.length){
+            if (value.firstNumber !== undefined){
                 value.Operator = "/";
             }
             displayValue.textContent += "/";
@@ -169,7 +169,7 @@ calculator.forEach((button)=>{
             let operator = value.Operator;
             let solution=(operate(firstNumber,secondNumber,operator));
             displayValue.textContent = solution;
-            firstNumber="";
+            firstNumber=solution;
             secondNumber="";
             value.firstNumber = solution;
             value.secondNumber="";
