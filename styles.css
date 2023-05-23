@@ -1,18 +1,26 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 .container,
 .calculator,
 .numbers,
 .operators {
-    display:flex;align-items: center;
+    display:flex;align-items: center;justify-content: space-between;
+    padding:20px;
 }
 
 
 .container, .operators, .numbers{
     flex-direction: column;
-    margin:20px;
+    margin-top:10px;margin-left:10px;margin-right: 10px;
+    justify-content: space-between;
 }
 
 .display{
+    display:flex;align-items:center;
     border: 1px solid black;
+    border-radius: 10px;
     padding:10px;
     min-width: 200px;
     min-height:30px;
@@ -21,4 +29,22 @@
 
 .button{
     margin:3px;
+    padding:8px;
+    border-radius: 25px;
+    min-width:40px;
+    min-height:40px;
+}
+
+.container{
+    border:1px solid black;
+    border-radius:25px;
+    max-width:360px;
+}
+
+.row{
+    min-width:200;
+}
+
+.operators.button{
+    min-width:60px;
 }
